@@ -21,7 +21,7 @@ def file_open(filename):
            today = datetime.date.today()
            time_in_loop = (today - start_date).days
            months = time_in_loop / 30
-           print (str(data[0:1][0]) + " " + str(months))
+           print (str(data[0:1][0]) + " minutes --> " + str(months) + " months spent looping")
 
 def main():
     argvs = sys.argv[1:]
