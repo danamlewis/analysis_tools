@@ -22,8 +22,12 @@ def loopDate(startDateFile):
 def calculateTime(numberOfReadings, totalNumberofReadings, range):
     percentTimeInRange = (numberOfReadings/totalNumberofReadings) * 100
     timeInRange = numberOfReadings * 5
-    print ("Percent time " + range +  ": " + str(percentTimeInRange))
+    # these below 2 lines print for terminal output
+    print ("Time " + range +  ": " + str(round(percentTimeInRange,2)) + "%")
     print ("Time " + range +  " (mins): " + str(timeInRange))
+
+    # Comment out the two lines above, and uncomment the below two lines to print the data in individual columns in CSV
+    # print (str(round(percentTimeInRange,2)) + "," + str(timeInRange) + ",", end='')
 
 def parseTimeInRanges(filename, lowerRange, upperRange, id, startDateFile):
     startDates = loopDate(startDateFile)
@@ -122,7 +126,8 @@ def flipThroughPath(path, lowerRange, upperRange, startDateFile):
         for file in filenames:
             filepath = subdirectory + os.sep + file
             if filepath.endswith(".csv") and "entries" in filepath:
-                print (filepath)
+                # uncomment the below line if you want to print the file name before the results in terminal                
+                #print (filepath)
                 parseTimeInRanges(filepath, lowerRange, upperRange, file, startDateFile)
 
 #convert from mmol to mgdl if needed
