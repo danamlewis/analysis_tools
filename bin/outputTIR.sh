@@ -16,10 +16,6 @@ ls -d [0-9]* | while read dir; do
 
     echo "PID, 'Time Low (%)', 'Time Low (Min)', 'Time range (%), 'Time range (Min)', 'Time high (%)', 'Time high (Min)'" > ../../../outputTIR.csv
     
-    # print PID into the file
-
-    echo -n "$dir," >> ../../../outputTIR.csv
-
     # run timeSpent.py for a target range of 80-180 and output the results in CSV
 
     python3  ~/analysis_tools/bin/timeSpent.py ~/analysis_tools/bin/ 80 180 ~/analysis_tools/bin/date.xlsx >> ../../../outputTIR.csv
