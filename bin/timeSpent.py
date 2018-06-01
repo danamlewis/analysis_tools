@@ -27,7 +27,7 @@ def calculateTime(numberOfReadings, totalNumberofReadings, range):
     print ("Time " + range +  " (mins): " + str(timeInRange))
 
     # Comment out the two lines above, and uncomment the below two lines to print the data in individual columns in CSV
-    # print (str(round(percentTimeInRange,2)) + "," + str(timeInRange) + ",", end='')
+    #print (str(round(percentTimeInRange,2)) + "," + str(timeInRange) + ",", end='')
 
 def parseTimeInRanges(filename, lowerRange, upperRange, id, startDateFile):
     startDates = loopDate(startDateFile)
@@ -60,6 +60,7 @@ def parseTimeInRanges(filename, lowerRange, upperRange, id, startDateFile):
             calculateTime(lowcount, totalcount, "low")
             calculateTime(rangecount, totalcount, "range")
             calculateTime(highcount, totalcount, "high")
+        print ()
         if id in startDates:
             startDate = startDates[id]
             for row in csvreader:
@@ -126,6 +127,8 @@ def flipThroughPath(path, lowerRange, upperRange, startDateFile):
         for file in filenames:
             filepath = subdirectory + os.sep + file
             if filepath.endswith(".csv") and "entries" in filepath:
+                # Attempting to get a newline to print the PID for CSV output
+                print((file.split("_")[0]) + ",",end='')
                 # uncomment the below line if you want to print the file name before the results in terminal                
                 #print (filepath)
                 parseTimeInRanges(filepath, lowerRange, upperRange, file, startDateFile)
