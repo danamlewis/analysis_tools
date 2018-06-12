@@ -8,7 +8,7 @@ set -eu
 
 ls -d [0-9]* | while read dir; do
 
- cd $dir/direct-sharing-31/${dir}_entries_*csv
+ cd $dir/direct-sharing-31/${dir}_entries*csv
     
     ls -d *.csv | while read file; do
 
