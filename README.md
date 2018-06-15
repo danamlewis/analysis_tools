@@ -36,3 +36,15 @@
 
 ### Example output:
 ![Example CSV output of TIR for multiple users](/bin/examples/example_outputTIR.png)
+
+## Tool 4: howmuchdata.sh
+
+Note: this script is sitting in OH Data Tools, but leaving the notes here because they are not finished/tested.
+
+https://github.com/danamlewis/OpenHumansDataTools/blob/master/bin/howmuchdata.sh <-- pull the date ranges of OH data, output into CSV so you can analyze how much looping time someone has. 
+
+## Tool 5: outcomes.sh
+
+Note: this script is sitting in OH Data Tools, but leaving the notes here because they are not finished/tested.
+
+https://github.com/danamlewis/OpenHumansDataTools/blob/master/bin/outcomes.sh <-- script to analyze data range of entries & device status data; calculates % TIR and Readings in range plus average glucose for the entries data where people are looping. (Aka, this analyzes the post-looping outcomes). 
