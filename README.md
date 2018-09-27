@@ -1,5 +1,7 @@
 # analysis_tools
 
+Note: this repository is primarily deprecated/hosted elsewhere. The first three tools live in this repo. The last two are actually hosted over at https://github.com/danamlewis/OpenHumansDataTools with more details & documentation, and they now achieve the same purpose of the first three. 
+
 ## Tool 1: parseTimeinLoop.py
 
 [parseTimeinLoop](https://github.com/danamlewis/analysis_tools/blob/master/bin/parseTimeinLoop.py) is a script to analyze how long someone has been using a DIY closed loop. Input file is a two-file with memberID in column A and looping start date in column B, e.g. "date.xlsx"
@@ -37,14 +39,10 @@
 ### Example output:
 ![Example CSV output of TIR for multiple users](/bin/examples/example_outputTIR.png)
 
-## Tool 4: howmuchdata.sh
+## Tool 4: howmuchBGdata.sh (See OpenHumansDataTools)
 
-Note: this script is sitting in OH Data Tools, but leaving the notes here because they are not finished/tested.
+See https://github.com/danamlewis/OpenHumansDataTools/blob/master/README.md#tool-5-assess-amount-of-looping-data for more details on this script to assess amount of BG data, and a companion script for assessing looping time. 
 
-https://github.com/danamlewis/OpenHumansDataTools/blob/master/bin/howmuchdata.sh <-- pull the date ranges of OH data, output into CSV so you can analyze how much looping time someone has. 
+## Tool 5: outcomes.sh (See OpenHumansDataTools)
 
-## Tool 5: outcomes.sh
-
-Note: this script is sitting in OH Data Tools, but leaving the notes here because they are not finished/tested.
-
-https://github.com/danamlewis/OpenHumansDataTools/blob/master/bin/outcomes.sh <-- script to analyze data range of entries & device status data; calculates % TIR and Readings in range plus average glucose for the entries data where people are looping. (Aka, this analyzes the post-looping outcomes). 
+See https://github.com/danamlewis/OpenHumansDataTools/blob/master/README.md#tool-6-outcomes, for this script to analyze data range of entries & device status data; calculates % TIR and Readings in range plus average glucose for the entries data where people are looping. (Aka, this analyzes the post-looping outcomes). 
